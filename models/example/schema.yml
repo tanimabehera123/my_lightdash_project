@@ -20,7 +20,7 @@ models:
           - unique
           - not_null
   
-  - name: airline_data
+  - name: airline
     description: "Table containing airline flight information"
     columns:
       - name: id
