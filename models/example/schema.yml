@@ -19,3 +19,48 @@ models:
         data_tests:
           - unique
           - not_null
+  
+  - name: airline_data
+    description: "Table containing airline flight information"
+    columns:
+      - name: id
+        description: "Primary key for each flight record"
+        tests:
+          - unique
+          - not_null
+
+      - name: airline_name
+        description: "Name of the airline operating the flight"
+        meta:
+          dimension:
+            type: string
+
+      - name: source
+        description: "Origin city of the flight"
+        meta:
+          dimension:
+            type: string
+
+      - name: destination
+        description: "Destination city of the flight"
+        meta:
+          dimension:
+            type: string
+
+      - name: departure_time
+        description: "Time the flight departs"
+        meta:
+          dimension:
+            type: time
+
+      - name: arrival_time
+        description: "Time the flight arrives"
+        meta:
+          dimension:
+            type: time
+
+      - name: price
+        description: "Ticket price for the flight in INR"
+        meta:
+          dimension:
+            type: number
